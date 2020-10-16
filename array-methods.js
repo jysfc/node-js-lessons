@@ -42,7 +42,7 @@ console.log(
    `${favoriteHoliday} is found at the ${indexOfIndependenceDay} of the holidays array.`
 );
 
-// const specificHoliday = `Monday, May 25 – Memorial Day`;
+const specificHoliday = `Mike's Birthday (April 21)`;
 
 // if (holidays.indexOf(specificHoliday) === -1) {
 //    console.log(`No, ${specificHoliday} is not a holiday.`); //true
@@ -55,7 +55,6 @@ console.log(
 // }
 
 // works the same with lastIndexOf() (search backwards, end to start)
-
 if (holidays.includes(specificHoliday)) {
    console.log(
       `Yes, ${specificHoliday} is a holiday. It was found at the ${holidays.indexOf(
@@ -65,3 +64,17 @@ if (holidays.includes(specificHoliday)) {
 } else {
    console.log(`No, ${specificHoliday} is not a holiday.`);
 }
+
+// find element and replace with (need index to change element in array)
+const replaceableHoliday = `Monday, February 17 – Washington's Birthday`;
+const indexOfReplaceableHoliday = holidays.indexOf(replaceableHoliday);
+console.log(
+   `We are going to replace ${replaceableHoliday} at the ${indexOfReplaceableHoliday} index of the holiays list.`
+);
+
+// creating new list (array) by adding ... or Array.from
+// spread ops https://www.samanthaming.com/tidbits/35-es6-way-to-clone-an-array/
+const newHolidays = ...(holidays);
+newHolidays[indexOfReplaceableHoliday] = specificHoliday;
+console.log(`Here's a list of our old holidays: `, holidays);
+console.log(`Here's a list of our new holidays: `, newHolidays);
