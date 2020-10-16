@@ -88,7 +88,24 @@ newHolidays[indexOfReplaceableHoliday] = specificHoliday;
 console.log(`Here's a list of our new holidays: `, newHolidays);
 console.log(`Here's a list of our new holidays from HR: `, newHolidaysFromHr);
 
-const allHolidays = newHolidays.concat(newHolidaysFromHr); //combining two array
+// const allHolidays = newHolidays.concat(newHolidaysFromHr); // combining two array by concat
+const allHolidays = [...newHolidays, ...newHolidaysFromHr]; // spread syntax
 console.log(`Here's a list of all holidays: `, allHolidays);
-const allFlatHolidays = allHolidays.flat();
+const allFlatHolidays = allHolidays.flat(); // removing subarrays
 console.log(`Here's a list of all holidays, but flat: `, allFlatHolidays);
+
+const allUniqHolidays = [...new Set(allFlatHolidays)]; // giving only uniq values (no dupe), adding ... spread
+console.log(`Here's a list of all UNIQUE holidays: `, allUniqHolidays);
+
+const firstHolidays = allUniqHolidays.slice(0, allUniqHolidays.indexOf(2020)); // cutting item off list
+console.log(`Here are the first holidays:\n`, firstHolidays);
+const secondHolidays = allUniqHolidays.slice(
+   allUniqHolidays.indexOf(`Thanksgiving Day (Fourth Thursday in November)`)
+);
+console.log(`Here are the second holidays:\n`, secondHolidays);
+
+const allCleanedUpHolidays = firstHolidays.concat(secondHolidays);
+console.log(
+   `At long last, here is the final list of holidays:\n`,
+   allCleanedUpHolidays
+);
