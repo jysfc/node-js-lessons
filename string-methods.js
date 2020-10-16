@@ -1,3 +1,5 @@
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
 const name = "    Mike    ";
 
 // removing white space
@@ -26,7 +28,6 @@ const email = "Mike@gmail.com";
 const lowerCasedEmail = email.toLowerCase();
 //console.log(`Normalized email address: ${lowerCasedEmail}`);
 
-
 //index
 let birthday = `4/21/1981`;
 
@@ -48,15 +49,14 @@ const indexOfLastSlash = birthday.lastIndexOf(`/`);
 const indexOfSecondToLastSlash = birthday.lastIndexOf(`/`, 3);
 // console.log(`The second to last slash in ${birthday} is found at ${indexOfSecondToLastSlash} index.`);
 
-
 const strToSearchFor = "1981";
 const indexOfString = birthday.indexOf(strToSearchFor); //index will turn negative one if its not found
 //console.log(`The string in ${strToSearchFor} is found at the ${indexOfString} index.`);
 
 if (birthday.indexOf(strToSearchFor) === -1) {
-    //console.log(`${birthday} has this string in it: ${strToSearchFor}`);
+   //console.log(`${birthday} has this string in it: ${strToSearchFor}`);
 } else {
-    //console.log(`${birthday} does not have this string in it: ${strToSearchFor}`);
+   //console.log(`${birthday} does not have this string in it: ${strToSearchFor}`);
 }
 
 // lastIndexOf as well returns -1 if something is not found. It just searches right to left.
@@ -67,27 +67,21 @@ const delimiter = `/`;
 const indexOfMonthDayDelimiter = birthday.indexOf(delimiter);
 const indexOfDayYearDelimiter = birthday.lastIndexOf(delimiter);
 const month = birthday.slice(0, indexOfMonthDayDelimiter);
-const day = birthday.slice(indexOfMonthDayDelimiter + 1, indexOfDayYearDelimiter);
+const day = birthday.slice(
+   indexOfMonthDayDelimiter + 1,
+   indexOfDayYearDelimiter
+);
 
 let year = birthday.slice(indexOfDayYearDelimiter + 1);
 console.log(`The month in ${birthday} is (${month}). `);
 console.log(`The day in ${birthday} is (${day}). `);
 console.log(`The day in ${birthday} is (${year}). `);
 
-
 year = `1980`;
 if (birthday.includes(year)) {
-    console.log(`The birthday ${birthday} includes the string: ${year}.`);
+   console.log(`The birthday ${birthday} includes the string: ${year}.`);
 } else {
-    console.log(`The birthday ${birthday} does not include the string: ${year}.`);
+   console.log(
+      `The birthday ${birthday} does not include the string: ${year}.`
+   );
 }
-
-
-
-
-
-
-
-
-
-
