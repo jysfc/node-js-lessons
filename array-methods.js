@@ -74,7 +74,7 @@ console.log(
 
 // creating new list (array) by adding ... or Array.from
 // spread ops https://www.samanthaming.com/tidbits/35-es6-way-to-clone-an-array/
-const newHolidays = ...(holidays);
+const newHolidays = [...holidays];
 newHolidays[indexOfReplaceableHoliday] = specificHoliday;
 console.log(`Here's a list of our old holidays: `, holidays);
 console.log(`Here's a list of our new holidays: `, newHolidays);
