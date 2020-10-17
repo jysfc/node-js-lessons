@@ -16,7 +16,7 @@ let federalHolidays = [];
 // if i start at 0, run it 10 times, increment by 1
 for (let i = 0; i < holidays.length; i++) {
    // console.log(holidays[i]); //i will input the array
-   // if it is a fedreal holiday...
+   // if it is a federal holiday...
    const holiday = holidays[i];
    const isFederalHoliday = holiday[2]; //true or false
 
@@ -29,16 +29,17 @@ for (let i = 0; i < holidays.length; i++) {
 
 // create a list of holiday dates; only the dates from holidays
 const holidayValues = holidays.flat();
-// console.log(holidayValues);
+console.log(holidayValues);
 let holidayDates = [];
 for (let i = 0; i < holidayValues.length; i++) {
    const value = holidayValues[i];
    // if the value is a number, concat it with holidayDates
    if (typeof value === `number`) {
-      const numAsString = string(numAsString);
+      // oh hey, can you convert them to strings?
+      const numAsString = String(value);
       holidayDates = holidayDates.concat(numAsString);
    }
-   // else, nothing. skip it.
+
    //"New Year's Day", 20200101, true + "Memorial Day", 20200525, true
 }
 console.log(holidayDates);
