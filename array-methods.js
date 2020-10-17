@@ -97,7 +97,7 @@ console.log(`Here's a list of all holidays, but flat: `, allFlatHolidays);
 const allUniqHolidays = [...new Set(allFlatHolidays)]; // giving only uniq values (no dupe), adding ... spread
 console.log(`Here's a list of all UNIQUE holidays: `, allUniqHolidays);
 
-const firstHolidays = allUniqHolidays.slice(0, allUniqHolidays.indexOf(2020)); // cutting item off list
+const firstHolidays = allUniqHolidays.slice(0, allUniqHolidays.indexOf(2020)); // cutting off list
 console.log(`Here are the first holidays:\n`, firstHolidays);
 const secondHolidays = allUniqHolidays.slice(
    allUniqHolidays.indexOf(`Thanksgiving Day (Fourth Thursday in November)`)
