@@ -1,4 +1,3 @@
-//reversing
 const todaysDate = `2020-09-11`;
 
 // split at separator then return as array
@@ -9,6 +8,7 @@ const month = dateParts[1];
 const day = dateParts[2];
 // console.log(year, month, day);
 
+//reversing string
 const greeting = `hello`;
 const greetingChars = greeting.split(``); // split turn string to array
 // console.log(greetingChars);
