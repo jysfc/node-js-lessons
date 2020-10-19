@@ -1,4 +1,4 @@
-const LessonCreatedAt = new Date(2020, 8, 11, 19, 42, 0, 500); // month is zero based 0Jan 11Dec
+const LessonCreatedAt = new Date(2020, 8, 9, 19, 42, 0, 500); // month is zero based 0Jan 11Dec
 // console.log(LessonCreatedAt);
 const loggedAt = Date.now();
 // console.log(loggedAt);
@@ -10,11 +10,11 @@ const loggedAt = Date.now();
 
 const createdAt = new Date(Date.now()); // new date will change number back to object
 // console.log(createdAt);
-const year = createdAt.getFullYear();
+const year = LessonCreatedAt.getFullYear();
 // console.log(year);
-const month = createdAt.getMonth();
-// console.log(month);
-const day = createdAt.getDate(); // pulling todays date
+const month = LessonCreatedAt.getMonth();
+console.log(month);
+const day = LessonCreatedAt.getDate(); // pulling todays date
 console.log(day);
 const hour = createdAt.getHours();
 // console.log(hour);
@@ -29,6 +29,17 @@ const milliseconds = createdAt.getMilliseconds();
 
 const prefix = String(year); // convert object to string so we can combine
 const middle = String(month + 1);
-const suffixTwo = String(day);
-const result = prefix + middle + suffixTwo;
+const suffix = String(day);
+
+// if month length is single digit
+if (middle.length < 2) {
+   // add a 0 in front
+   paddedMonth = `0` + middle;
+}
+
+if (suffix.length < 2) {
+   paddedDate = `0` + suffix;
+}
+
+const result = prefix + paddedMonth + paddedDate;
 console.log(result);

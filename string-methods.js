@@ -4,13 +4,13 @@ const name = "    Mike    ";
 
 // removing white space
 const trimmedName = name.trim();
-//console.log(`The trimmed name is ${trimmedName}.`);
+// console.log(`The trimmed name is ${trimmedName}.`);
 
 const startTrimmedName = name.trimStart(); // can also use trimLeft()
-//console.log(`The start/left trimmed name is ${startTrimmedName}.`);
+// console.log(`The start/left trimmed name is ${startTrimmedName}.`);
 
 const endTrimmedName = name.trimEnd(); // can also use trimRight()
-//console.log(`The end/right trimmed name is ${endTrimmedName}.`);
+// console.log(`The end/right trimmed name is ${endTrimmedName}.`);
 
 // length of input
 const nameLength = trimmedName.length;
@@ -18,17 +18,17 @@ const nameLength = trimmedName.length;
 
 // upper/lower case
 const upperCasedName = trimmedName.toUpperCase();
-//console.log(`HEY ${upperCasedName}!`);
+// console.log(`HEY ${upperCasedName}!`);
 
 const lowerCasedName = trimmedName.toLowerCase();
-//onsole.log(`shhhh.... hi ${lowerCasedName}...`);
+// console.log(`shhhh.... hi ${lowerCasedName}...`);
 
 // normalize (lowercase the email)
 const email = "Mike@gmail.com";
 const lowerCasedEmail = email.toLowerCase();
-//console.log(`Normalized email address: ${lowerCasedEmail}`);
+// console.log(`Normalized email address: ${lowerCasedEmail}`);
 
-//index
+// index
 let birthday = `4/21/1981`;
 
 const indexOfMonth = birthday.indexOf(`4`);
@@ -51,7 +51,7 @@ const indexOfSecondToLastSlash = birthday.lastIndexOf(`/`, 3);
 
 const strToSearchFor = "1981";
 const indexOfString = birthday.indexOf(strToSearchFor); //index will turn negative one if its not found
-//console.log(`The string in ${strToSearchFor} is found at the ${indexOfString} index.`);
+// console.log(`The string in ${strToSearchFor} is found at the ${indexOfString} index.`);
 
 if (birthday.indexOf(strToSearchFor) === -1) {
    //console.log(`${birthday} has this string in it: ${strToSearchFor}`);
