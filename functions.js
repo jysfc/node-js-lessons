@@ -51,7 +51,7 @@ console.log(hasError);
 
 const id = `char-counter`;
 const message = `You have exceeded the character limit.`;
-showError(hasError, id, message); // calling showError
+// showError(hasError, id, message); // calling showError
 
 function showError(hasError, id, message) {
    // id = `#char-counter`, You have exceeded the character limit.
@@ -66,3 +66,11 @@ function showError(hasError, id, message) {
       $(id).hide(errorId);
    }
 }
+
+const $ = jQuery; // so you can use $ instead of jQuery
+$(`#your-id`).hide();
+$(`.input`).show(); // jquery functions - parameter of ID, Class
+getUserInput();
+[(`b`, `a`)].join(``);
+_.fill([`z`, `e`, `t`, `l`, `o`, `w`], `*`, 1, 5); // [`z`,`*`,`*`,`*`,`*`,`w`].join(``)
+// _. functions lodash
