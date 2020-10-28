@@ -6,17 +6,7 @@ const user = {
    id: getId(),
 };
 
-// adding property to objects will mutate the obj. so we want to make a copy first
-// using spread makes a shallow copy
-const copyOfUser = { ...user }; // Object.assign({}, theNameOfYourObj)
-copyOfUser.isActive = true; // target copyOfUser
-copyOfUser.tokenExpiredAt = user.createdAt + 86400000; // dot notation get value +
-copyOfUser.isCoolPerson = true; // adding property
-copyOfUser.isCoolPerson = false; // updating property
-delete copyOfUser.isCoolPerson; // deleting property
-
 console.log(user); // adding .label to target just the one label
-console.log(copyOfUser);
 
 /* functions start here */
 
