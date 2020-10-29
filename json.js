@@ -41,6 +41,7 @@ console.log(newUser);
 if (newUser !== undefined) {
    // if new user is not undefined, consolelog large3
    newUser.socialProfiles[indexOfFacebook].image.large = "large3.jpg";
+
    console.log("-----------------");
    console.log(newUser.socialProfiles);
 }
