@@ -39,7 +39,7 @@ for (let i = 0; i < users.length; i++) {
 users.forEach(function (user) {
    //    console.log(user.name);
 });
-// arrow function, exec
+// arrow function, executed
 users.forEach((user) => {
    //    console.log(user.name);
 });
@@ -55,9 +55,9 @@ users.forEach((user) => {
    }
 });
 
-console.log(activeUsers);
+// console.log(activeUsers);
 
-// put a function inside, exec for result
+// put a function inside, executed for result
 users.forEach((user) => {
    // whatever you want to do
    // This is technically a side effect
