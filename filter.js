@@ -1,3 +1,5 @@
+// filter return an array looking for true and false
+
 const users = [
    { name: "Mike", isActive: true, createdAt: 1601234512420 },
    { name: "John", isActive: true, createdAt: 1601234512430 },
