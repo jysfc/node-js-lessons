@@ -46,19 +46,26 @@ const users = [
    },
 ];
 
-const fbUsers = users.map((user) => {
-   // name + fb name only
-   const newUser = {
-      name: user.name,
-      fbName: getFbName(user),
-   };
-   return newUser;
-});
+const fbUsers = users
+   .map((user) => {
+      // name * fb name only
+      const newUser = {
+         name: user.name,
+         fbName: getFbNameUsingFP(user),
+      };
+      return newUser;
+   })
+   .filter((user) => {
+      //only return users with a fb account
+      return user.fbName !== "";
+   });
+
+console.log(fbUsers);
 
 function getFbName(user) {
    // return FB name if they have one
    // if they don't return empty string: ""
-   let fbName = ``;
+   let fbName = "";
    user.socialProfiles.forEach((profile) => {
       if (profile.site === "facebook") {
          fbName = profile.username;
@@ -77,5 +84,3 @@ function getFbNameUsingFP(user) {
    }
    return "";
 }
-
-console.log(fbUsers);
